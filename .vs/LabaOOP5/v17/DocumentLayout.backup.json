@@ -1,0 +1,87 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\aleks\\source\\repos\\LabaOOP5\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{34ADC5F2-8B72-4AA8-891E-8510D0EDAFCD}|LabaOOP5.csproj|c:\\users\\aleks\\source\\repos\\labaoop5\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34ADC5F2-8B72-4AA8-891E-8510D0EDAFCD}|LabaOOP5.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34ADC5F2-8B72-4AA8-891E-8510D0EDAFCD}|LabaOOP5.csproj|c:\\users\\aleks\\source\\repos\\labaoop5\\magazine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34ADC5F2-8B72-4AA8-891E-8510D0EDAFCD}|LabaOOP5.csproj|solutionrelative:magazine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34ADC5F2-8B72-4AA8-891E-8510D0EDAFCD}|LabaOOP5.csproj|c:\\users\\aleks\\source\\repos\\labaoop5\\article.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34ADC5F2-8B72-4AA8-891E-8510D0EDAFCD}|LabaOOP5.csproj|solutionrelative:article.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34ADC5F2-8B72-4AA8-891E-8510D0EDAFCD}|LabaOOP5.csproj|c:\\users\\aleks\\source\\repos\\labaoop5\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34ADC5F2-8B72-4AA8-891E-8510D0EDAFCD}|LabaOOP5.csproj|solutionrelative:person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Magazine.cs",
+              "DocumentMoniker": "C:\\Users\\aleks\\source\\repos\\LabaOOP5\\Magazine.cs",
+              "RelativeDocumentMoniker": "Magazine.cs",
+              "ToolTip": "C:\\Users\\aleks\\source\\repos\\LabaOOP5\\Magazine.cs",
+              "RelativeToolTip": "Magazine.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAFEAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-30T11:00:46.996Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Article.cs",
+              "DocumentMoniker": "C:\\Users\\aleks\\source\\repos\\LabaOOP5\\Article.cs",
+              "RelativeDocumentMoniker": "Article.cs",
+              "ToolTip": "C:\\Users\\aleks\\source\\repos\\LabaOOP5\\Article.cs",
+              "RelativeToolTip": "Article.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-30T10:45:22.045Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Person.cs",
+              "DocumentMoniker": "C:\\Users\\aleks\\source\\repos\\LabaOOP5\\Person.cs",
+              "RelativeDocumentMoniker": "Person.cs",
+              "ToolTip": "C:\\Users\\aleks\\source\\repos\\LabaOOP5\\Person.cs",
+              "RelativeToolTip": "Person.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T08:55:48.878Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\aleks\\source\\repos\\LabaOOP5\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\aleks\\source\\repos\\LabaOOP5\\Program.cs*",
+              "RelativeToolTip": "Program.cs*",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAF0AAABhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T08:54:11.981Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
