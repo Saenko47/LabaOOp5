@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Dynamic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using static LabaOOP5.Program;
 
@@ -10,6 +12,8 @@ namespace LabaOOP5
 {
     internal class Magazine
     {
+        const string pattern = @"^[A-Z][a-z]+$";
+        const string datepattern = @"yyyy-MM-dd";
         private string name;
         private Frequency frequency;
         private DateTime dateOfPublishing;
@@ -34,7 +38,11 @@ namespace LabaOOP5
         public string Name
         {
             get { return this.name; }
-            set { this.name = value; }
+            set
+            {
+                if (value != String.Empty && Regex.IsMatch(value, pattern)) this.name = value;
+                else throw new Exception("Wrong name format string");
+            }
         }
         public Frequency Frequency
         {
@@ -44,18 +52,36 @@ namespace LabaOOP5
         public DateTime DateOfPublishing
         {
             get { return this.dateOfPublishing; }
-            set { this.dateOfPublishing = value; }
+            set
+            {
+                if (Regex.IsMatch(value.ToString("yyyy-MM-dd"), datepattern))
+                {
+                    this.dateOfPublishing = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Invalid dateOfPublishing format.");
+                }
+            }
         }
         public int Circulation
         {
             get { return this.circulation; }
-            set { this.circulation = value; }
+            set
+            {
+                if (value > 0) this.circulation = value;
+                else throw new Exception("Value is such numbers");
+            }
         }
         public Article[] Articles
         {
             get { return this.articles; }
             set { this.articles = value ?? new Article[0]; }
         }
+        public Article this[int index]{
+            get { return this.articles[index]; }
+            set { this.articles[index] = value; }
+            }
         public double AvarageScore()
         {
             double avarage = 0;
@@ -81,6 +107,7 @@ namespace LabaOOP5
                 updatedArticles[articles.Length + i] = newArticles[i];
             }
             articles = updatedArticles;
+
 
         }
         public override string ToString()

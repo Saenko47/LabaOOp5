@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Xml.Schema;
 
 namespace LabaOOP5
 {
     internal class Person
     {
+        const string pattern = @"^[А-Яа-яЁё]+$";
+        const string datepattern = @"yyyy-MM-dd";
         private string name;
         private string lastName;
         private DateTime birthdate;
@@ -19,25 +23,40 @@ namespace LabaOOP5
         }
         public Person(string name, string lastName, DateTime birthdate)
         {
-            this.name = name;
+            this.name = Regex.IsMatch(name, pattern)?name: throw new Exception("Wrong name format string") ;
             this.lastName = lastName;
             this.birthdate = birthdate;
         }
         public string Name
         {
             get { return this.name; }
-            set { this.name = value; }
+            set {if (value != String.Empty&&Regex.IsMatch(value,pattern)) this.name = value;
+                else throw new Exception("Wrong name format string");
+            }
 
         }
         public string LastName
         {
             get { return this.lastName; }
-            set { this.lastName = value; }
+            set
+            {
+                if (value != String.Empty && Regex.IsMatch(value, pattern)) this.lastName = value;
+                else throw new Exception("Empty string");
+            }
         }
         public DateTime Birthdate
         {
             get { return this.birthdate; }
-            set { this.birthdate = value; }
+            set {
+                if (Regex.IsMatch(value.ToString("yyyy-MM-dd"), datepattern))
+                {
+                    this.birthdate = value;
+                }
+                else
+                {
+                    throw new Exception("Invalid birthdate format.");
+                }
+            }
         }
         public int BirthYear
         {
