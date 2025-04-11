@@ -11,7 +11,7 @@ namespace LabaOOP5
     internal class Person
     {
         const string pattern = @"^[А-Яа-яЁё]+$";
-        const string datepattern = @"yyyy-MM-dd";
+        const string datepattern = @"^\d{4},\d{2},\d{2}$";
         private string name;
         private string lastName;
         private DateTime birthdate;
@@ -24,8 +24,8 @@ namespace LabaOOP5
         public Person(string name, string lastName, DateTime birthdate)
         {
             this.name = Regex.IsMatch(name, pattern)?name: throw new Exception("Wrong name format string") ;
-            this.lastName = lastName;
-            this.birthdate = birthdate;
+            this.lastName = Regex.IsMatch(lastName, pattern) ? lastName : throw new Exception("Wrong lastname format string");
+            this.birthdate = (Regex.IsMatch(birthdate.ToString("yyyy,MM,dd"), datepattern) ? birthdate : throw new Exception("Invalid birthdate format."));
         }
         public string Name
         {

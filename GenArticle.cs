@@ -11,25 +11,25 @@ namespace LabaOOP5
         static Random rnd = new Random();
         private static string[] articleNames = new string[]
 {
-    "Understanding Artificial Intelligence",
-    "The Future of Quantum Computing",
-    "Exploring the Depths of Space",
-    "Climate Change and Global Impact",
+    "Understanding artificial intelligence",
+    "The future of quantum computing",
+    "Exploring the depths of space",
+    "Climate change and global impact",
     "The Rise of Renewable Energy",
     "Cybersecurity in the Modern World",
-    "Genetic Engineering: Risks and Rewards",
+    "Genetic Engineering Risks and Rewards",
     "The Psychology of Decision Making",
     "Blockchain Beyond Cryptocurrency",
     "The Art of Effective Communication",
     "Machine Learning in Healthcare",
-    "Virtual Reality: Gaming and Beyond",
+    "Virtual Reality Gaming and Beyond",
     "The Ethics of AI Development",
     "Big Data and Predictive Analytics",
     "Biotechnology and Human Life",
     "The Science of Sleep",
     "History of the Internet",
     "The Role of Technology in Education",
-    "Renewable vs. Nonrenewable Energy",
+    "Renewable vs Nonrenewable Energy",
     "Social Media and Mental Health"
 };
        public Article[] GenerateArticles(Person[] persons)

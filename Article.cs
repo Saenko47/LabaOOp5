@@ -12,20 +12,20 @@ namespace LabaOOP5
 {
     internal class Article
     {
-        const string pattern = @"^[A-Z][a-z]+$";
+        const string pattern = @"^([A-Z][a-z]+)([\sA-Za-z])+$";
         public Person person;
         public string articleName;
         public double score;
         public Article()
         {
             this.person = new Person("No name", "No lastName", DateTime.Now);
-            this.articleName = Regex.IsMatch(articleName, pattern) ? articleName : throw new Exception("Wrong artricle name format string");
+            this.articleName = "No name";
             this.score = 0.0;
         }
         public Article(Person person, string articleName, double score)
         {
             this.person = person;
-            this.articleName = articleName;
+            this.articleName = Regex.IsMatch(articleName, pattern) ? articleName : throw new Exception("Wrong artricle name format string");
             this.score = score;
         }
         public Person Person

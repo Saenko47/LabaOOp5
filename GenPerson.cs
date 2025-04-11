@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace LabaOOP5
 {
@@ -32,7 +33,9 @@ namespace LabaOOP5
             {
                 int year = rnd.Next(1950, 2025);
                 int month = rnd.Next(1, 13);
-                int day = rnd.Next(1, DateTime.DaysInMonth(year, month) + 1);
+                int daysInMonth = DateTime.DaysInMonth(year, month);
+                int day = rnd.Next(1, daysInMonth + 1);
+               
                 DateTime birthDate = new DateTime(year, month, day);
                 person[k] = new Person(names[rnd.Next(0, names.Length)], lastnames[rnd.Next(0, lastnames.Length)],birthDate);
 

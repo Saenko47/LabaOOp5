@@ -88,25 +88,13 @@ namespace LabaOOP5
         }
         static void Main(string[] args)
         {
-            
-
-            
-            try{
-               GenPerson generator = new GenPerson();
-                GenArticle artGenerator = new GenArticle();
-                Person[] persons = generator.GeneratePerson(10);
-                Article[] article = artGenerator.GenerateArticles(persons);
-
-                Magazine magazine = new Magazine("Bebra", Frequency.Yearly, new DateTime(1991, 9, 8), 51, article);
-                Console.WriteLine(magazine);
-
-               
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("An error occurred: " + ex.Message);
-            }
-
+            GenMagazine genMagazine = new GenMagazine();           
+            Magazine[] magazines = genMagazine.GenerateMagazine(7, 15);
+               foreach(Magazine i in magazines)
+                {
+                    Console.WriteLine(i);
+                }
+          
         }
     }
 }

@@ -12,8 +12,8 @@ namespace LabaOOP5
 {
     internal class Magazine
     {
-        const string pattern = @"^[A-Z][a-z]+$";
-        const string datepattern = @"yyyy-MM-dd";
+        const string pattern = @"^([A-Z][a-z]+)([\sA-Za-z])+$";
+        const string datepattern = @"^\d{4},\d{2},\d{2}$";
         private string name;
         private Frequency frequency;
         private DateTime dateOfPublishing;
@@ -29,10 +29,10 @@ namespace LabaOOP5
         }
         public Magazine(string name, Frequency frequency, DateTime dateOfPublishing, int circulation, Article[] articles)
         {
-            this.name = name;
+            this.name = name != String.Empty && Regex.IsMatch(name, pattern) ? name : throw new Exception("Wrong name for magazine");
             this.frequency = frequency;
-            this.dateOfPublishing = dateOfPublishing;
-            this.circulation = circulation;
+            this.dateOfPublishing = (Regex.IsMatch(dateOfPublishing.ToString("yyyy,MM,dd"), datepattern) ? dateOfPublishing : throw new Exception("Invalid dateOfPublishing format."));
+            this.circulation = (circulation>0)?circulation:21;
             this.articles = articles ?? new Article[0];
         }
         public string Name
@@ -60,7 +60,7 @@ namespace LabaOOP5
                 }
                 else
                 {
-                    throw new ArgumentException("Invalid dateOfPublishing format.");
+                    throw new Exception("Invalid dateOfPublishing format.");
                 }
             }
         }
@@ -115,9 +115,9 @@ namespace LabaOOP5
             StringBuilder articlelist = new StringBuilder();
             for (int k = 0; k < articles.Length; ++k)
             {
-                articlelist.Append(articles[k].ToString()).Append(";");
+                articlelist.Append(articles[k].ToString()).Append(";\n");
             }
-            return $"Magazine: {name}, Frequency: {Frequency}, Release Date: {dateOfPublishing:yyyy-MM-dd}, Circulation: {Circulation}, Avg Score: {avgscore:F1}, articles:{articlelist}";
+            return $"Magazine: {name}, Frequency: {Frequency}, Release Date: {dateOfPublishing:yyyy-MM-dd}, Circulation: {Circulation}, Avg Score: {avgscore:F1}, articles:\n{articlelist}";
         }
         public string ToShortString()
         {
